@@ -1,3 +1,9 @@
+
+"""
+Link de Github
+https://github.com/daidrovo15/Lab_2_y_3.git
+"""
+
 # Importacion de librerias
 from collections import defaultdict
 from numpy import var
