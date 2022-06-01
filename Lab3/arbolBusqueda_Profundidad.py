@@ -63,6 +63,7 @@ class Grafos:
         
         self.DFS(v, busqueda_Marcada) 
 
+#-----------------------------------------------------------------------------------------------------------------------
     impresion3 = __init__.__doc__
     print (impresion3)             
     impresion2 = agrega_Borde.__doc__

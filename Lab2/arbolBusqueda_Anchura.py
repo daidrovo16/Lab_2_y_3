@@ -58,6 +58,8 @@ class Grafo:
                 if vertice_Visitado[i] == False:
                     queue.append(i)
                     vertice_Visitado[i] = True
+
+#-----------------------------------------------------------------------------------------------------------------------
     impresion2 = __init__.__doc__
     print (impresion2)
     impresion3 = agrega_Borde.__doc__
