@@ -119,4 +119,30 @@ print("Busqueda en Profundidadss inicializando desde el verice(1)")
 g.busqueda(1)
 print()
 
+#-----------------------------------------------------
+print("Caso de prueba 4:")
+g.agrega_Borde(0, 1)
+g.agrega_Borde(3, 4)
+g.agrega_Borde(1, 2)
+g.agrega_Borde(7, 2)
+g.agrega_Borde(4, 5)
+g.agrega_Borde(2, 3)
+g.agrega_Borde(4, 3)
+ 
+print("Busqueda en Profundidadss inicializando desde el verice(1)")
+g.busqueda(1)
+print()
 
+#-----------------------------------------------------
+print("Caso de prueba 5:")
+g.agrega_Borde(0, 1)
+g.agrega_Borde(3, 4)
+g.agrega_Borde(1, 2)
+g.agrega_Borde(7, 2)
+g.agrega_Borde(4, 5)
+g.agrega_Borde(2, 3)
+g.agrega_Borde(4, 3)
+ 
+print("Busqueda en Profundidadss inicializando desde el verice(1)")
+g.busqueda(1)
+print()

@@ -103,8 +103,41 @@ g.agrega_Borde(2, 3)
 print ("Busqueda por anchura inicializando desde el vertice(2)")
 g.BFS(7)
 print()
+
 #----------------------------------------------------------------------------------------------------------------------
 print("Caso de prueba 3:")
+g.agrega_Borde(1, 2)
+g.agrega_Borde(4, 6)
+g.agrega_Borde(2, 7)
+g.agrega_Borde(3, 2)
+g.agrega_Borde(2, 5)
+g.agrega_Borde(2, 8)
+g.agrega_Borde(7, 2)
+g.agrega_Borde(4, 5)
+g.agrega_Borde(2, 3)
+ 
+print ("Busqueda por anchura inicializando desde el vertice(2)")
+g.BFS(1)
+print()
+
+#----------------------------------------------------------------------------------------------------------------------
+print("Caso de prueba 4:")
+g.agrega_Borde(1, 2)
+g.agrega_Borde(4, 6)
+g.agrega_Borde(2, 7)
+g.agrega_Borde(3, 2)
+g.agrega_Borde(2, 5)
+g.agrega_Borde(2, 8)
+g.agrega_Borde(7, 2)
+g.agrega_Borde(4, 5)
+g.agrega_Borde(2, 3)
+ 
+print ("Busqueda por anchura inicializando desde el vertice(2)")
+g.BFS(1)
+print()
+
+#----------------------------------------------------------------------------------------------------------------------
+print("Caso de prueba 5:")
 g.agrega_Borde(1, 2)
 g.agrega_Borde(4, 6)
 g.agrega_Borde(2, 7)
