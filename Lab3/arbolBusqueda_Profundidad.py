@@ -1,52 +1,85 @@
 
 """
 Link de Github
-https://github.com/daidrovo15/Lab_2_y_3.git
+https://github.com/daidrovo16/Lab_2_y_3.git
 """
 
 # Importacion de librerias
 from collections import defaultdict
 
-
-"""Implementacion de la clase grafo
-haciendo uso de las listas de adyacencia"""
 class Grafos:
+    
+    """
+    
+    Implementacion de la clase grafo haciendo uso de las listas de adyacencia
+    
+    """
     # Constructor
     def __init__(self):
-        """Se realiza la implementacion de un diccionario de datos
-        para el almacenamiento de los nodos del grafo"""
-        self.Grafos = defaultdict(list)
-    """Se implementa la funcion de agregacion de un borde al grafo"""
+        """
+        Se realiza la implementacion de un diccionario de datos
+        para el almacenamiento de los nodos del grafo
+        -------------------------------------------------
+        Se implementa la funcion de agregacion de un borde al grafo
+        
+        """
+        self.grafos = defaultdict(list)
+
     def agrega_Borde(self, u, v):
-        self.Grafos[u].append(v)
+            """ 
+            Funcion para el uso de Busqueda en profundidad(DFS)
+            """
+            self.grafos[u].append(v)
         
-    """ Funcion para el uso de Busqueda en profundidad(DFS)"""
-    def busqueda_Prufunda(self, v, busqueda_Marcada):
+    def DFS(self, v, busqueda_Marcada):
         
-        """Funcion que visita o marca el nodo y lo muestra como obtenido"""
+        """
+            Funcion que visita o marca el nodo y lo muestra como obtenido
+            ---------------------------------------------
+            Funcion que indica la recurrencia de los vertices adyacentes al vertice obtenido
+            ------------------------------------------
+            Funcion para hacer el recorrido en DFS. Uso de recursividad en la busqueda por profundidad
+        """
         busqueda_Marcada.add(v)
         print(v, end=' ')
     
-        """Funcion que indica la recurrencia de los vertices adyacentes
-            al vertice obtenido"""
-        for visita_Vertice in self.Grafos[v]:
+        for visita_Vertice in self.grafos[v]:
             if visita_Vertice not in busqueda_Marcada:
-                self.busqueda_Prufunda(visita_Vertice, busqueda_Marcada)
+                self.DFS(visita_Vertice, busqueda_Marcada)
 
-    """Funcion para hacer el recorrido en DFS. Uso de recursividad 
-    en la busqueda por profundidad"""
+
     def busqueda(self, v):
         
-        """Crea una lista, la cual almacena los nodos visitados"""
+        """
+        Crea una lista, la cual almacena los nodos visitados
+        
+        --------------------------------------------------
+        Se genera un llamada a la funcion recursiva,
+        la cual muestra el recorrido del arbol
+        
+        """
         busqueda_Marcada = set()
-        
-        """Se genera un llamada a la funcion recursiva,
-        la cual muestra el recorrido del arbol"""
-        
-        self.busqueda_Prufunda(v, busqueda_Marcada) 
 
-""" Se crea un grafo predeterminado por datos definido"""
+        
+        self.DFS(v, busqueda_Marcada) 
+
+    impresion3 = __init__.__doc__
+    print (impresion3)             
+    impresion2 = agrega_Borde.__doc__
+    print (impresion2)
+    impresion1 = DFS.__doc__
+    print (impresion1)
+    impresion5 = busqueda.__doc__
+    print (impresion5)
+
+impresion4 = Grafos.__doc__
+print (impresion4)  
+
+if __name__ == '__main__':
+    """ Se crea un grafo predeterminado por datos definido"""
 g = Grafos()
+#-----------------------------------------------------
+print("Caso de prueba 1:")
 g.agrega_Borde(0, 1)
 g.agrega_Borde(0, 2)
 g.agrega_Borde(1, 2)
@@ -56,3 +89,30 @@ g.agrega_Borde(3, 3)
  
 print("Busqueda en Profundidadss inicializando desde el verice(2)")
 g.busqueda(2)
+print()
+#-----------------------------------------------------
+g.agrega_Borde(0, 1)
+g.agrega_Borde(0, 1)
+g.agrega_Borde(0, 2)
+g.agrega_Borde(1, 2)
+g.agrega_Borde(2, 0)
+g.agrega_Borde(2, 3)
+g.agrega_Borde(3, 3)
+#-----------------------------------------------------
+print("Busqueda en Profundidadss inicializando desde el verice(2)")
+g.busqueda(2)
+print()
+#-----------------------------------------------------
+g.agrega_Borde(0, 1)
+g.agrega_Borde(0, 1)
+g.agrega_Borde(0, 2)
+g.agrega_Borde(1, 2)
+g.agrega_Borde(2, 0)
+g.agrega_Borde(2, 3)
+g.agrega_Borde(3, 3)
+ 
+print("Busqueda en Profundidadss inicializando desde el verice(2)")
+g.busqueda(2)
+print()
+
+

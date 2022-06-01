@@ -1,6 +1,6 @@
 """
 Link de Github
-https://github.com/daidrovo15/Lab_2_y_3.git
+https://github.com/daidrovo16/Lab_2_y_3.git
 """
 '''Programa Python3 para imprimir el recorrido BFS
     de un vértice fuente dado. 
@@ -50,11 +50,19 @@ class Grafo:
                 if vertice_Visitado[i] == False:
                     queue.append(i)
                     vertice_Visitado[i] = True
-    impresion = BFS.__doc__
-    print (impresion)
+    impresion2 = __init__.__doc__
+    print (impresion2)
+    impresion3 = agrega_Borde.__doc__
+    print (impresion3)
+    impresion4 = BFS.__doc__
+    print (impresion4)
+
+impresion1 = Grafo.__doc__
+print(impresion1)
 
 
-"""Codigo de ejecucion.
+if __name__ == "__main__":
+    """Codigo de ejecucion.
     Crear un gráfico dado en
     el diagrama de arriba"""
 g = Grafo()
@@ -68,3 +76,4 @@ g.agrega_Borde(3, 3)
 print ("Busqueda por anchura inicializando desde el vertice(2)")
 g.BFS(2)
 
+print()
