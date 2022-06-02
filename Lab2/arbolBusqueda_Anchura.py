@@ -7,13 +7,11 @@ https://github.com/daidrovo16/Lab_2_y_3.git
 from collections import defaultdict
 class Grafo:
     """
-        Se importa la libreria de collections para poder usar el diccionario defaultdict. 
-        Al importar defaultdict, esta hace la creacion de un diccionario que representa un grafo.
-        La diferencia de queue es que la cola es una lista, 
-        mientras que defaultdict es un diccionario que representa una lista.
+        Se importa la libreria collections, y se crea una instancia de la clase defaultdict.
+        Se crea una clase Grafo y se le agrega una lista de adyacencia.
         
         --------------------------------------------------------------------------------- 
-        El programa desarrollado Python3, de arboles binarios de busqueda por Anchura o recorrido BFS
+        El programa desarrollado Python3, de grafos de busqueda por Anchura o recorrido BFS
         de un vertice dado. 
         
         ---------------------------------------------------------------------------------    
@@ -30,14 +28,9 @@ class Grafo:
         """
         Esta clase representa un grafo dirigido usando representación de lista de adyacencia.
         ---------------------------------------------------------------------------------        
-        Se crea un instancia de la clase Grafo, y se le agrega una lista de adyacencia.
-        Esta instancia se denomina __init__(nodo), a la que se le pasa un nodo.
-        Creando una lista de adyacencia, en la cual se crea un diccionario 
-        que almacena una lista de adyacencia.
-        
-        La variable que se creo en la instancia denominada nodo, es una lista de adyacencia.
-        La cual se crea como un diccionario, donde se almacenan los vertices como llaves, 
-        el nodo.grafo es un diccionario que representa el grafo.
+        Se crea un instancia de la clase Grafo, y se agrega una lista de adyacencia.
+        La instancia __init__(nodo), a la que se le pasa un nodo.
+        Se cre una lista de adyacencia, que almacena una lista de adyacencia.
         
         La API defaultdict(list) esusada en la creacion de un diccionario que crea una lista por defecto.
         
@@ -48,13 +41,7 @@ class Grafo:
 
     def agrega_Borde(nodo,u,v): 
         """ 
-        Diccionario predeterminado para almacenar el gráfico
-        ---------------------------------------------------------------------------------
-        Para realizar el BFS, se agrega un borde entre los vertices u y v, 
-        para esto se agrega el vertice v a la lista de adyacencia de u. 
-        Para esto se debe tener en cuenta que el grafo es dirigido.
-        Tambien se debe tener en cuenta que si el grafo al es dirigido, 
-        se agrega un borde entre u y v, pero no entre v y u.
+        Diccionario predeterminado para almacenar el gráfico.add()        
         ---------------------------------------------------------------------------------
         agrega_Borde(nodo,u,v) agrega un borde entre los vertices u y v, 
         append() agrega un elemento al final de la lista.
@@ -91,23 +78,7 @@ class Grafo:
             for i in nodo.grafo[s]: obtiene todos los vertices adyacentes del vertice s
             if vertice_Visitado[i] == False: marca el vertice i como visitado y lo pone en la cola
             queue.append(i) agrega el vertice i a la cola
-            vertice_Visitado[i] = True marca el vertice i como visitado
-            
-            Al tener todo este while, se imprime el BFS de gráfico desde el vertice s, donde 
-            se imprime el vertice s, y se imprime todos los vertices adyacentes del vertice s, 
-            para esto se debe tener en cuenta que el grafo es dirigido.
-            Al tener un vertice ya visitado en la cola, este elimina de la cola.
-            Haciendo que el vertice s sea el siguiente de la cola, se puede imprimir el BFS de gráfico, 
-            y haciendo que i sea el siguiente de la cola y asi sucesivamente. 
-            
-                '''
-                Se crea un metodo __main__ para que el programa se ejecute, 
-                para esto se crea una instancia de la clase Grafo. La cual se crea con el metodo __init__, 
-                al tener casos de prueba, se crean instancias de la clase Grafo.
-                Para esto se agrega diferentes casos de prueba, para que el programa se ejecute.
-                Y pueda imprimir el BFS de gráfico.
-                '''
-        
+            vertice_Visitado[i] = True marca el vertice i como visitado        
         """
         vertice_Visitado = [False] * (max(nodo.grafo) + 1)
         queue = []
@@ -139,15 +110,15 @@ if __name__ == "__main__":
 
     g = Grafo()
 print("Caso de prueba 1:")
-#g.agrega_Borde(0, 1)
-#g.agrega_Borde(0, 2)
-#g.agrega_Borde(1, 2)
-#g.agrega_Borde(2, 0)
-#g.agrega_Borde(2, 3)
-#g.agrega_Borde(3, 3)
-#print ("Busqueda por anchura inicializando desde el vertice(2)")
-#g.BFS(2) #Imprime los datos del grafo en forma de lista 
-#print()
+g.agrega_Borde(0, 1)
+g.agrega_Borde(0, 2)
+g.agrega_Borde(1, 2)
+g.agrega_Borde(2, 0)
+g.agrega_Borde(2, 3)
+g.agrega_Borde(3, 3)
+print ("Busqueda por anchura inicializando desde el vertice(2)")
+g.BFS(2) #Imprime los datos del grafo en forma de lista 
+print()
 print("-----------------------------------------------------------------------------------------------------------------------")
 #----------------------------------------------------------------------------------------------------------------------
 print("Caso de prueba 2:")
@@ -197,13 +168,14 @@ print("Caso de prueba 4:")
 print("-----------------------------------------------------------------------------------------------------------------------")
 #----------------------------------------------------------------------------------------------------------------------
 print("Caso de prueba 5:")
-g.agrega_Borde(0, 1)
-g.agrega_Borde(0, 3)
-g.agrega_Borde(0, 4)
-g.agrega_Borde(4, 5)
-g.agrega_Borde(3, 5)
-g.agrega_Borde(1, 2)
-g.agrega_Borde(5, 4)
-print ("Busqueda por anchura inicializando desde el vertice(0)")
-g.BFS(0) #Imprime los datos del grafo en forma de lista 
-print()
+#g.agrega_Borde(0, 1)
+#g.agrega_Borde(0, 3)
+#g.agrega_Borde(0, 4)
+#g.agrega_Borde(4, 5)
+#g.agrega_Borde(3, 5)
+#g.agrega_Borde(1, 2)
+#g.agrega_Borde(5, 4)
+#print ("Busqueda por anchura inicializando desde el vertice(0)")
+#g.BFS(0) #Imprime los datos del grafo en forma de lista 
+#print()
+
