@@ -8,11 +8,15 @@ https://github.com/daidrovo16/Lab_2_y_3.git
 from collections import defaultdict
 
 class Grafos:
-    
     """
-    
-    Implementacion de la clase grafo haciendo uso de las listas de adyacencia
-    
+    Para ello se debe de crear una instancia de la clase Grafos.
+    Se agregan los bordes del grafo, y luego se debe de llamar a la funcion busqueda.
+    la cual recibe como parametro el nodo inicial. Esto se realiza para que el programa pueda mostrar el recorrido del grafo. 
+    -------------------------------------------------
+    Antes de empezar a entrar a la funcion, se importa la libreria collections.defaultdict. 
+    Esta libreria nos permite crear un diccionario de datos, en este caso, un diccionario de listas. 
+    Luego de esto se Implementa de la clase Grafo haciendo uso de las listas de adyacencia para el almacenamiento de los nodos 
+    -------------------------------------------------
     """
     # Constructor
     def __init__(self):
@@ -34,6 +38,7 @@ class Grafos:
     def DFS(self, v, busqueda_Marcada):
         
         """
+            
             Funcion que visita o marca el nodo y lo muestra como obtenido
             ---------------------------------------------
             Funcion que indica la recurrencia de los vertices adyacentes al vertice obtenido
@@ -77,7 +82,8 @@ impresion4 = Grafos.__doc__
 print (impresion4)  
 
 if __name__ == '__main__':
-    """ Se crea un grafo predeterminado por datos definido"""
+    """ Se crea un grafo predeterminado por datos definido
+    """
 g = Grafos()
 #-----------------------------------------------------
 print("Caso de prueba 1:")
